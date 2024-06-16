@@ -1,5 +1,5 @@
 # Student: Valentina Hernandez Vera
-# EXCEEDING REQUIREMENTS: Using if-elif-else statements, I added the possibility for the user to share their phone number or email address so he or she can be notified of the results of this program's survey. Said information is stored in volumes.txt.
+# EXCEEDING REQUIREMENTS: Using if-elif-else statements, I added the possibility for the user to share their phone number or email address so he or she can be notified of the results of this program's survey. Said information is stored in volumes.txt
 
 import math
 from datetime import datetime

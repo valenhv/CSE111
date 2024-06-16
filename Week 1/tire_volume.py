@@ -28,27 +28,29 @@ ans_yes = ["Y", "YES"]
 ans_no = ["N", "NO"]
 phone_num = "N/A"
 email_address = "N/A"
+ans = ""
+while ans.upper() != "Y" or "YES" or "N" or "NO":
+    print("Would you like to know about the results of this survey? This includes if your tire was accepted and commercialized.")
+    print("Please answer with 'yes' or 'no' (or alternatively, 'y' or 'n').")
+    ans = input(">>")
 
-print("Would you like to know about the results of this survey? This includes if your tire was accepted and commercialized.")
-print("Please answer with 'yes' or 'no' (or alternatively, 'y' or 'n').")
-ans = input(">>")
-if ans.upper() in ans_yes:
-    print("Please select to which one of these options we should let you know about the results:")
-    print("Type A for PHONE NUMBER")
-    print("Type B for E-MAIL")
-    choice = input(">>")
-    if choice.upper() == "A":
-        print("Please enter your phone number. Include your national code. Example: +54 11 50 1234:")
-        phone_num = input(">>")
-    elif choice.upper() == "B":
-        print("Please enter your e-mail address. Example: name@mailservice.com")
-        email_address = input(">>")
+    if ans.upper() in ans_yes:
+        print("Please select to which one of these options we should let you know about the results:")
+        print("Type A for PHONE NUMBER")
+        print("Type B for E-MAIL")
+        choice = input(">>")
+        if choice.upper() == "A":
+            print("Please enter your phone number. Include your national code. Example: +54 11 50 1234:")
+            phone_num = input(">>")
+        elif choice.upper() == "B":
+            print("Please enter your e-mail address. Example: name@mailservice.com")
+            email_address = input(">>")
+        else:
+            print("Invalid input. Please try again.")
+    elif ans.upper() in ans_no:
+        print("Understood. You will not be personally notified of any results.")
     else:
         print("Invalid input. Please try again.")
-elif ans.upper() in ans_no:
-    print("Understood. You will not be personally notified of any results.")
-else:
-    print("Invalid input. Please try again.")
 
 print("We have added this information in our system. Our employees will revise it. Thank you for participating!")
 

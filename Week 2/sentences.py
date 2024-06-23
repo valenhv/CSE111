@@ -89,14 +89,15 @@ def get_resolution():
 
 # Collects all the randomly chosen words and puts them together to make sentences.
 def main ():
+    # Gets the randomly chosen words for introduction, build-ups and resolution.
     introduction = get_introduction()
-
     buildup1 = get_buildup()
     buildup2 = get_buildup()
     buildup3 = get_buildup()
     buildup4 = get_buildup()
     resolution = get_resolution()
 
+    # The sentences are built here.
     single_past = f"{get_determiner(1)} {get_noun(1)} {get_verb(1, 'past')} {get_prepositional_phrase(1)}"
 
     single_present = f"{get_determiner(1)} {get_noun(1)} {get_verb(1, 'present')} {get_prepositional_phrase(1)}"
@@ -109,7 +110,7 @@ def main ():
 
     plural_future = f"{get_determiner(2)} {get_noun(2)} {get_verb(2, 'future')} {get_prepositional_phrase(2)}"
     
-    # The result is shown in these print functions.
+    # Here, the sentences are connected to the introduction, build-ups and resolution.
     print(f"{introduction.capitalize()}, {single_past}.")
     print(f"{buildup1.capitalize()}, {single_present}.")
     print(f"{buildup2.capitalize()}, {single_future}.")
